@@ -5,7 +5,8 @@
  * Note: The returned array must be malloced, assume caller calls free().
  */
 bool* kidsWithCandies(int* candies, int candiesSize, int extraCandies, int* returnSize) {
-    bool* arr_result=(char *)malloc(candiesSize*sizeof(bool));
+    bool* arr_result=(bool *)malloc(candiesSize*sizeof(bool));
+    *returnSize=candiesSize;
     bool res=true;
     int i,j,extra_num;
     for(i=0;i<candiesSize;i++)
